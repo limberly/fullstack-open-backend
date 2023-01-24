@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build:ui": "cd ../../../fullstack-open/part2/phonebook && npm run build && cp -r build ../../../fullstack-open-backend/part3/phonebook",
+    "deploy": "fly deploy",
+    "deploy:full": "npm run build:ui && npm run deploy" 
   },
   "author": "Hyungue Lim",
   "license": "ISC",
